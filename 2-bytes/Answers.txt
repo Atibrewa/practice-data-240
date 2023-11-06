@@ -1,0 +1,13 @@
+1. The machine is Little Endian, because after assigning a pointer, it prints the bytes of the number in reverse 
+    so it must store the least significant byte in the smallest address position.
+
+2. A string is read differently than an int. Every piece of the string is one byte, be it a letter or a digit.
+    So if there is a tring of length 6, it has 6 exactly 6 bites. There is no concenpt of endian in strings
+    because a string has no "least significant bit", every bit is equally significant, so there is no endian.
+    Instead, the string is stored in the order it is written, starting with the leftmost bit and going to the right.
+
+3.  The print statement now prints the address (the pointer values) and the value stored at each of those addresses.
+    For example, if we store a string "ABCDEF" in memory, it stores the value of A (0x41) at the address 0x400a67 and then B (0x42)
+    is saved at 0x400a68 and so on.
+
+    The value for the pointer (the address) increases by one bit per run of the loop. 8 bits = 1 byte.
